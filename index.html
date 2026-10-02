@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Insider Verdict | E-Services Portal</title>
+    <title>The Insider Verdict | National E-Services Portal</title>
     <script src="https://tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cloudflare.com">
     <style>
@@ -19,7 +19,7 @@
     <nav class="bg-[#1c2541] border-b border-[#3a506b] p-4 sticky top-0 z-50">
         <div class="max-w-6xl mx-auto flex justify-between items-center">
             <h1 class="text-xl font-bold tracking-wider text-white">
-                <i class="fa-solid fa-scale-balanced accent-color mr-2"></i>THE INSIDER VERDICT <span class="text-xs btn-gradient px-2 py-0.5 rounded text-white font-semibold">E-SERVICES</span>
+                <i class="fa-solid fa-scale-balanced accent-color mr-2"></i>THE INSIDER VERDICT <span class="text-xs btn-gradient px-2 py-0.5 rounded text-white font-semibold">NATIONWIDE E-SERVICES</span>
             </h1>
             <a href="https://vercel.app" class="text-sm bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-full font-semibold transition-all">
                 <i class="fa-solid fa-house mr-2"></i>Secure Hub
@@ -32,97 +32,102 @@
         
         <!-- HEADER TEXT -->
         <div class="text-center mb-8">
-            <h2 class="text-3xl font-extrabold tracking-tight mb-2">ANONYMOUS CITIZEN REPORTING & TRACKING PORTAL</h2>
-            <p class="text-gray-400 text-sm max-w-2xl mx-auto">Protektado ang inyong pagkakakilanlan sa ilalim ng Data Privacy Act. Kami ang magiging boses mo upang busisiin, i-fact-check, at kalampagin ang mga anomalya sa pamahalaan.</p>
+            <h2 class="text-3xl font-extrabold tracking-tight mb-2">PHILIPPINES CITIZEN REPORTING & ACCOUNTABILITY PORTAL</h2>
+            <p class="text-gray-400 text-sm max-w-2xl mx-auto">Buksan ang boses ng pampublikong pananagutan sa buong bansa. Protektado ang inyong identity sa ilalim ng Data Privacy Act. Kami ang magisini-suri at i-fact-check ang mga anomalya mula sa iba't ibang rehiyon.</p>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
             
-            <!-- COLUMN 1 & 2: REPORT FORM -->
+            <!-- COLUMN 1 & 2: NATIONWIDE REPORT FORM -->
             <div class="lg:col-span-2 card-glow rounded-xl p-6">
                 <h3 class="text-lg font-bold mb-4 border-b border-gray-600 pb-2 accent-color">
-                    <i class="fa-solid fa-file-pen mr-2"></i>Mag-submit ng Bagong Sumbong (iReport)
+                    <i class="fa-solid fa-file-shield mr-2"></i>Mag-submit ng Pambansang Sumbong (Nationwide iReport)
                 </h3>
                 
-                <!-- INTEGRATED FORMSPREE DATABASE LINK -->
                 <form action="https://formspree.io" method="POST" class="space-y-4">
                     <div>
                         <label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Pangalan (Iwanang bakante kung nais ng Anonymous)</label>
                         <input type="text" name="Pangalan" class="w-full bg-[#0b132b] border border-[#3a506b] rounded-lg p-3 text-white focus:outline-none focus:border-[#00b4d8]" placeholder="Opsyonal po ito...">
                     </div>
                     
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Barangay / Siyudad *</label>
-                            <input type="text" name="Lokasyon" required class="w-full bg-[#0b132b] border border-[#3a506b] rounded-lg p-3 text-white focus:outline-none focus:border-[#00b4d8]" placeholder="Halimbawa: Brgy. Pinyahan, QC">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Uri ng Paglabag / Kategorya *</label>
-                            <select name="Kategorya" required class="w-full bg-[#0b132b] border border-[#3a506b] rounded-lg p-3 text-white focus:outline-none focus:border-[#00b4d8]">
-                                <option value="Kakulangan/Delayed na Ayuda">Kakulangan/Delayed na Ayuda o Pondo</option>
-                                <option value="Palakasan sa Pabahay (NHA)">Palakasan System sa Pabahay (NHA/LGU)</option>
-                                <option value="Lubak/Punding Ilaw/Basura">Lokal na Isyu (Lubak, Basura, Kalsada)</option>
-                                <option value="Abuso/Korapsyon ng Opisyal">Abuso o Korapsyon ng Lokal na Opisyal</option>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="md:col-span-1">
+                            <label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Rehiyon / Isla *</label>
+                            <select name="Isla_Rehiyon" required class="w-full bg-[#0b132b] border border-[#3a506b] rounded-lg p-3 text-white focus:outline-none focus:border-[#00b4d8]">
+                                <option value="Luzon">Luzon (NCR / Regions I-V / CAR)</option>
+                                <option value="Visayas">Visayas (Regions VI-VIII)</option>
+                                <option value="Mindanao">Mindanao (Regions IX-XIII / BARMM)</option>
                             </select>
                         </div>
+                        <div class="md:col-span-2">
+                            <label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Probinsya, Lungsod, at Barangay *</label>
+                            <input type="text" name="Eksaktong_Lokasyon" required class="w-full bg-[#0b132b] border border-[#3a506b] rounded-lg p-3 text-white focus:outline-none focus:border-[#00b4d8]" placeholder="Halimbawa: Santa Maria, Bulacan / Cagayan de Oro City">
+                        </div>
                     </div>
 
                     <div>
-                        <label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Mga Detalye at Katotohanan (Sumbong) *</label>
-                        <textarea name="Mga_Detalye" rows="5" required class="w-full bg-[#0b132b] border border-[#3a506b] rounded-lg p-3 text-white focus:outline-none focus:border-[#00b4d8]" placeholder="Ilagay dito ang buong detalye, pangalan ng opisyal kung mayroon, at timeline..."></textarea>
+                        <label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Pambansang Kategorya ng Sumbong / Paglabag *</label>
+                        <select id="categorySelect" name="Pambansang_Kategorya" required class="w-full bg-[#0b132b] border border-[#3a506b] rounded-lg p-3 text-white focus:outline-none focus:border-[#00b4d8]" onchange="toggleOthersInput()">
+                            <option value="National/Local Government Corruption">Tiwaling Gawain / Korapsyon (National o Local Government)</option>
+                            <option value="National Subsidy & Financial Aid Abuses">Anomalya sa Ayuda, Subsidy, at Pondo (4Ps, TUPAD, Livelihood Grants)</option>
+                            <option value="Public Infrastructure & Local Services Neglect">Kapabayaan sa Proyekto (Lubak, Sirang Kalsada, Punding Ilaw, Basura)</option>
+                            <option value="Government Housing & Relocation Malpractices">Iregularidad sa Pabahay at Relokasyon (NHA / LGU Palakasan System)</option>
+                            <option value="Law Enforcement & Public Facility Misconduct">Pang-aabuso o Kakulangan ng Law Enforcement (PNP, BFP, Public Hospitals)</option>
+                            <option value="Environmental Violations & Illegal Dumping">Ilegal na Pagtatambak ng Basura / Isyung Pangkalikasan</option>
+                            <option value="Others">Iba pang Isyu / Iba pang Uri ng Paglabag (Others)</option>
+                        </select>
+                    </div>
+
+                    <!-- AUTOMATIC SPECIFY FIELD FOR OTHERS -->
+                    <div id="othersField" class="hidden">
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-amber-400 mb-1">Pakisulat ang Partikular na Isyu (Specify Category) *</label>
+                        <input type="text" id="specifyInput" name="Tinukoy_na_Kategorya" class="w-full bg-[#0b132b] border border-amber-500 rounded-lg p-3 text-white focus:outline-none focus:border-amber-400" placeholder="I-specify po kung tungkol saan ang inyong ulat...">
                     </div>
 
                     <div>
-                        <label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Link ng Ebidensya, Larawan, o Dokumento (Optional)</label>
-                        <input type="url" name="Link_Ebidensya" class="w-full bg-[#0b132b] border border-[#3a506b] rounded-lg p-3 text-white focus:outline-none focus:border-[#00b4d8]" placeholder="I-paste ang link ng photo, video, o screenshot dito...">
+                        <label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Mga Detalye, Katotohanan, at Timeline ng Sumbong *</label>
+                        <textarea name="Mga_Detalye" rows="5" required class="w-full bg-[#0b132b] border border-[#3a506b] rounded-lg p-3 text-white focus:outline-none focus:border-[#00b4d8]" placeholder="Ilatag nang malinaw ang kwento, mga sangkot na opisyal o ahensya, at petsa ng insidente..."></textarea>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Link ng Ebidensya, Larawan, o Video Attachment (Optional)</label>
+                        <input type="url" name="Link_Ebidensya" class="w-full bg-[#0b132b] border border-[#3a506b] rounded-lg p-3 text-white focus:outline-none focus:border-[#00b4d8]" placeholder="I-paste ang link ng Google Drive, OneDrive, o screenshot link dito...">
                     </div>
 
                     <button type="submit" class="w-full btn-gradient py-3 rounded-lg font-bold hover:opacity-90 transition-all text-white uppercase tracking-wider">
-                        <i class="fa-solid fa-paper-plane mr-2"></i>I-submit ang Verdict Report
+                        <i class="fa-solid fa-paper-plane mr-2"></i>I-submit ang Nationwide Report
                     </button>
                 </form>
             </div>
 
-            <!-- COLUMN 3: SIDEBAR STATS -->
+            <!-- COLUMN 3: NATIONWIDE STATS -->
             <div class="space-y-6">
                 <div class="card-glow rounded-xl p-6">
                     <h3 class="text-sm font-bold uppercase tracking-wider text-gray-400 mb-3">
-                        <i class="fa-solid fa-chart-pie accent-color mr-2"></i>Live Dashboard Stats
+                        <i class="fa-solid fa-globe accent-color mr-2"></i>Philippine Coverage
                     </h3>
                     <div class="grid grid-cols-2 gap-4">
                         <div class="bg-[#0b132b] p-3 rounded-lg border border-[#3a506b] text-center">
-                            <span class="block text-2xl font-black accent-color">142</span>
-                            <span class="text-xs text-gray-400">Total Reports</span>
+                            <span class="block text-2xl font-black accent-color">3</span>
+                            <span class="text-xs text-gray-400">Main Island Groups</span>
                         </div>
                         <div class="bg-[#0b132b] p-3 rounded-lg border border-[#3a506b] text-center">
-                            <span class="block text-2xl font-black text-amber-400">38</span>
-                            <span class="text-xs text-gray-400">Under Review</span>
+                            <span class="block text-2xl font-black text-emerald-400">17</span>
+                            <span class="text-xs text-gray-400">Regions Tracked</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="card-glow rounded-xl p-6">
                     <h3 class="text-sm font-bold uppercase tracking-wider text-gray-400 mb-3">
-                        <i class="fa-solid fa-triangle-exclamation text-red-400 mr-2"></i>Recent Public Tickets
+                        <i class="fa-solid fa-receipt text-amber-400 mr-2"></i>Recent Verified Cases
                     </h3>
                     <div class="space-y-3 text-xs">
                         <div class="border-l-2 border-amber-400 pl-2 py-1">
-                            <span class="font-mono text-gray-400 block">TIV-2026-0891 (Pending)</span>
-                            <p class="text-gray-200 font-medium">Delay sa pamamahagi ng rental subsidy sa Brgy. Pinyahan...</p>
+                            <span class="font-mono text-gray-400 block">TIV-NAT-0912 (Luzon)</span>
+                            <p class="text-gray-200 font-medium">Anomalya sa 4Ps at CBMS Masterlist verification sa Central Luzon...</p>
                         </div>
                         <div class="border-l-2 border-emerald-400 pl-2 py-1">
-                            <span class="font-mono text-gray-400 block">TIV-2026-0884 (Verified)</span>
-                            <p class="text-gray-200 font-medium">Overloading sa octopus wiring sa mga natitirang shanty...</p>
+                            <span class="font-mono text-gray-400 block">TIV-NAT-0895 (Mindanao)</span>
+                            <p class="text-gray-200 font-medium">BFP structural protection inspection clearance complaints...</p>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </main>
-
-    <footer class="text-center py-8 text-xs text-gray-500 mt-12 border-t border-[#3a506b]">
-        © 2026 The Insider Verdict. Independent Community Journalism. All rights reserved.
-    </footer>
-</body>
-</html>
