@@ -44,10 +44,25 @@
                     <i class="fa-solid fa-file-shield mr-2"></i>Mag-submit ng Pambansang Sumbong (Nationwide iReport)
                 </h3>
                 
-                <form action="https://formspree.io" method="POST" class="space-y-4">
+                <form id="mainReportForm" action="https://formspree.io" method="POST" class="space-y-4">
+                    <!-- HIDDEN FIELD FOR AUTOMATED TICKET NUMBER -->
+                    <input type="hidden" id="hiddenTicketInput" name="Generated_Ticket_Number" value="">
+
+                    <!-- CONTACT FIELDS SECTION -->
                     <div>
                         <label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Pangalan (Iwanang bakante kung nais ng Anonymous)</label>
                         <input type="text" name="Pangalan" class="w-full bg-[#0b132b] border border-[#3a506b] rounded-lg p-3 text-white focus:outline-none focus:border-[#00b4d8]" placeholder="Opsyonal po ito...">
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Numero ng Telepono / Mobile Number (Optional)</label>
+                            <input type="tel" name="Telepono" class="w-full bg-[#0b132b] border border-[#3a506b] rounded-lg p-3 text-white focus:outline-none focus:border-[#00b4d8]" placeholder="Halimbawa: 0917XXXXXXX...">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Email Address (Optional)</label>
+                            <input type="email" name="Email" class="w-full bg-[#0b132b] border border-[#3a506b] rounded-lg p-3 text-white focus:outline-none focus:border-[#00b4d8]" placeholder="Halimbawa: Juan@email.com...">
+                        </div>
                     </div>
                     
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -112,22 +127,3 @@
                             <span class="text-xs text-gray-400">Main Island Groups</span>
                         </div>
                         <div class="bg-[#0b132b] p-3 rounded-lg border border-[#3a506b] text-center">
-                            <span class="block text-2xl font-black text-emerald-400">17</span>
-                            <span class="text-xs text-gray-400">Regions Tracked</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-glow rounded-xl p-6">
-                    <h3 class="text-sm font-bold uppercase tracking-wider text-gray-400 mb-3">
-                        <i class="fa-solid fa-receipt text-amber-400 mr-2"></i>Recent Verified Cases
-                    </h3>
-                    <div class="space-y-3 text-xs">
-                        <div class="border-l-2 border-amber-400 pl-2 py-1">
-                            <span class="font-mono text-gray-400 block">TIV-NAT-0912 (Luzon)</span>
-                            <p class="text-gray-200 font-medium">Anomalya sa 4Ps at CBMS Masterlist verification sa Central Luzon...</p>
-                        </div>
-                        <div class="border-l-2 border-emerald-400 pl-2 py-1">
-                            <span class="font-mono text-gray-400 block">TIV-NAT-0895 (Mindanao)</span>
-                            <p class="text-gray-200 font-medium">BFP structural protection inspection clearance complaints...</p>
-                        </div>
